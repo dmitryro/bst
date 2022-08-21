@@ -11,7 +11,18 @@ Binary Tree Implementation using Go, Queue and Tree data structures, Breadth Fir
 
 
 ## Initial Assumptions
-
+To successfully run the project some initial assumptions need to be made:
+### **Valid Go Version**
+    - **Go 1.18** oor later must be installed.
+### **GOROOT** 
+    -should point to the proper Go SDK location.
+### **GOPATH** 
+    - should be pointing to  a valid workspace.
+### **Queue** 
+    - structure is used to implement **BFS** search. We use a custom implementation, while alternative 
+      third party implementations exist.
+### **Tree** and **Queue** behaviors are covered by unit tests, to run which please follow the instructions below.
+     
 
 ## How to Import
 ### Importing the Queue
