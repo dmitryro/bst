@@ -17,9 +17,9 @@ Binary Tree Implementation using Go, Queue and Tree data structures, Breadth Fir
 
 
 
-### Queue 
-## Data Structures
-# Generic Queue Type is used to allow reuse for different types
+## Queue 
+### Data Structures
+#### Generic Queue Type is used to allow reuse for different types
 ```
 type Queue[T any] []T
 ```
@@ -32,20 +32,20 @@ type Queue[T any] []T
 ## Tests
 
 
-### Binary Search Tree Methods
-## Data Structures
-#
+## Binary Search Tree
+### Data Structures
+#### 
 
-## Methods
-#
+### Methods
+####
 
 
 ## Tests
+###
 
 
-
-## Running Tests
-# To run Queue tests 
+### Running Tests
+#### To run Queue tests 
 
 ```
    cd ./queue
@@ -55,7 +55,7 @@ and execute:
    go test
 ```
 
-# To run Tree tests 
+#### To run Tree tests 
 
 ```
    cd ./queue
@@ -66,9 +66,7 @@ and execute:
 ```
 
 ## Author
-
-
-
+Dmitry Roiitman 
 
 
 
