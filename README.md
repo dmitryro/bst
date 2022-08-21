@@ -4,7 +4,6 @@ Binary Tree Implementation using Go, Queue and Tree data structures, Breadth Fir
 ## Getting Started
 
 
-## Versions used
 
 
 ## Installing Go 1.18 or later
@@ -158,7 +157,23 @@ type BSTree struct {
 ```
 
 ### Methods
-####
+#### [**Insert**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L30):
+  - **Description**: BST Object method allowing to add a new node to **BST**.
+
+  - **Signature**: ``` func (t *BSTree) Insert(Val int) *BSTree  ```
+
+  - **Returned Value**: Returns no values
+
+
+#### [**Insert**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L40):
+  - **Description**: Node Object method does the actual recurive traversal and is used as helper method by tree to insert a new node to *BST**.
+
+  - **Signature**: ``` func (n *TreeNode) Insert(Val int)  ```
+
+  - **Returned Value**: Returns no values
+
+
+
 
 
 ## Tests
