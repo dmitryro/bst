@@ -31,24 +31,27 @@ type Queue[T any] []T
 
 
 ### Methods
-#### **Enqueue**
-**Description**: Add a new item to the **Queue**.
+#### **Enqueue**:
+  - **Description**: Add a new item to the **Queue**.
 
-**Signature**: ``` func (q *Queue[T]) Enqueue(v T)  ```
+  - **Signature**: ``` func (q *Queue[T]) Enqueue(v T)  ```
 
-**Returned Value**: Returns no values
+  - **Returned Value**: Returns no values
 
 
-#### **Dequeue** 
-#### Description: Remove an item from the top of the **Queue**.
-#### Signature: ``` func (q *Queue[T]) Dequeue() (T, bool) ```
-#### Returns **true** or **false** in case of **success** or **falure** to dequeue, and the top item removed from teh queue.
+#### **Dequeue**: 
+  - **Description**: Remove an item from the top of the **Queue**.
+
+  - **Signature**: ``` func (q *Queue[T]) Dequeue() (T, bool)  ```
+
+  - **Returned Value**: Returns **true** or **false** in case of **success** or **falure** to dequeue, and the top item removed from teh queue.
+
 
 
 #### **Size**
-#### Description: Return the current size of the **Queue**.
-#### Signature: ``` func (q *Queue[T]) Size() int ```
-#### Returns **int** value of the queue size.
+  - **Description**: Return the current size of the **Queue**.
+  - **Signature**: ``` func (q *Queue[T]) Size() int ```
+  - **Returned Value**: Returns **int** value of the queue size.
 
 
 ### Tests
