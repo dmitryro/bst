@@ -182,7 +182,6 @@ func (t *BSTree) FindTreeMax() int {
       return val
 }
 
-
 func (t *BSTree) FindTreeMin() int {
       current := t.Root
       var val = int(math.Inf(1))
@@ -196,28 +195,6 @@ func (t *BSTree) FindTreeMin() int {
           }
       }
       return val
-}
-
-
-//FindMax finds the max element in the given BST
-func (root *TreeNode) FindMax() int {
-    if root == nil {
-        minusInf := int(math.Inf(-1))
-        root = &TreeNode{Val: minusInf, Left: nil, Right: nil}     
-    }
-    val := root.Val
-
-    lLeft := root.Left.FindMax() 
-    lRight := root.Right.FindMax()
-
-    if lLeft > val {
-        val = lLeft
-    }
-
-    if lRight > val {
-        val = lRight
-    }
-    return val
 }
 
 

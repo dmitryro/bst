@@ -166,9 +166,25 @@ type BSTree struct {
 
 
 #### [**Insert (node method)**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L40):
-  - **Description**: Node Object method does the actual recurive traversal and is used as helper method by tree to insert a new node to *BST**.
+  - **Description**: Node Object method receives the tree root and does the actual recurive traversal of the BST. It's used as helper method by tree to insert a new node to *BST**.
 
-  - **Signature**: ``` func (n *TreeNode) Insert(Val int)  ```
+  - **Signature**: ``` func (n *TreeNode) Insert(Val int)  ``` - the tree root is provided as initial parameter to traverse.
+
+  - **Returned Value**: Returns no values
+
+
+#### [**Print**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L30):
+  - **Description**: **BST** Object method allowing to add a new node to **BST**.
+
+  - **Signature**: ``` func (t *BSTree) Insert(Val int) *BSTree  ```
+
+  - **Returned Value**: Returns no values
+
+
+#### [**print**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L40):
+  - **Description**: Node Object method receives the tree root and does the actual recurive traversal of the BST. It's used as helper method by tree to insert a new node to *BST**.
+
+  - **Signature**: ``` func (n *TreeNode) Insert(Val int)  ``` - the tree root is provided as initial parameter to traverse.
 
   - **Returned Value**: Returns no values
 
