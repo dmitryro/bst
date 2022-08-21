@@ -159,7 +159,7 @@ type BSTree struct {
 ```
 
 ### Methods
-#### [**DeepestNodeWithDepth**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L30):
+#### [**DeepestNodeWithDepth**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L329):
   - **Description**: **BST** Object method finding the largest depth and finding the nodes at this deepest level.
 
   - **Signature**: ``` func  (t *BSTree) DeepestNodeWithDepth() *[]NodeItem  ```
@@ -167,15 +167,15 @@ type BSTree struct {
   - **Returned Value**: Returns a list of **NodeItem** objects with values and their depths found at the deepest level of the tree.
 
 
-#### [**DeepestNodes**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L30):
+#### [**DeepestNodes**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L214):
   - **Description**: **BST** Object method finding the nodes with the larges depth using DFS helper call utilizing queue structure.
 
-  - **Signature**: ``` func  (t *BSTree) DeepestNodeWithDepth() *[]NodeItem  ```
+  - **Signature**: ``` func (t *BSTree) DeepestNodes() []TreeNode ```
 
   - **Returned Value**: Returns a list of **TreeNode** objects found at the deepest level of the tree that were fetched by **findDeepestBFS** helper.
 
 
-#### [**DeleteNode**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L30):
+#### [**DeleteNode**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L108):
   - **Description**: **BST** Object method allowing to add a new node to **BST**.
 
   - **Signature**: ``` func (t *BSTree) DeleteNode(Value int)  ```
@@ -183,7 +183,7 @@ type BSTree struct {
   - **Returned Value**: Returns no values
 
 
-#### [**Delete**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L40):
+#### [**Delete**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L114):
   - **Description**: Node Object method receives the tree root and does the actual recurive traversal of the BST. It's used as helper method by tree to insert a new node to *BST**.
 
   - **Signature**: ``` func (t *TreeNode) Delete(Value int) *TreeNode  ``` - the tree root is provided as initial parameter to traverse.
@@ -191,7 +191,7 @@ type BSTree struct {
   - **Returned Value**: Returns no values
 
 
-#### [**findDeepestBFS**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L30):
+#### [**findDeepestBFS**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L240):
   - **Description**: **BST** Object method allowing **BFS** search for deepest nodes using **Queue** structure.
 
   - **Signature**: ``` func findDeepestBFS(root *TreeNode) *[]TreeNode  ```
@@ -199,7 +199,7 @@ type BSTree struct {
   - **Returned Value**: Returns **[]TreeNode** list of pointers to the deepest nodes.
 
 
-#### [**FindNode**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L30):
+#### [**FindNode**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L79):
   - **Description**: **BST** Object method allowing to add a new node to **BST**.
 
   - **Signature**: ``` func (tree *BSTree) FindNode(Val int) *NodeItem  ```
@@ -207,7 +207,7 @@ type BSTree struct {
   - **Returned Value**: Returns no values
 
 
-#### [**Find**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L40):
+#### [**Find**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L90):
   - **Description**: Node Object method receives the tree root and does the actual recurive traversal of the BST. It's used as helper method by tree to insert a new node to *BST**.
 
   - **Signature**: ``` func (t *TreeNode) Find(Value int) (TreeNode, bool)  ``` - the tree root is provided as initial parameter to traverse.
@@ -215,20 +215,20 @@ type BSTree struct {
   - **Returned Value**: Returns the node if found, empty record if not, true/false boolean depending succes or falure of the search.
 
 
-#### [**FindTreeMax**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L40):
-  - **Description**: Node Object method receives the tree root and does the actual recurive traversal of the BST. It's used as helper method by tree to insert a new node to *BST**.
+#### [**FindTreeMax**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L182):
+  - **Description**: Use the existing tree's root to go to the rightmost downside element and return the value. 
 
-  - **Signature**: ``` func (t *TreeNode) Find(Value int) (TreeNode, bool)  ``` - the tree root is provided as initial parameter to traverse.
+  - **Signature**: ``` func (t *BSTree) FindTreeMax() int ``` - The tree root from tree object is used to traverse, recursively traversed by helper.
 
-  - **Returned Value**: Returns the node if found, empty record if not, true/false boolean depending succes or falure of the search.
+  - **Returned Value**: Returns the maximal value if found
 
 
-#### [**FindTreeMin**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L40):
-  - **Description**: Node Object method receives the tree root and does the actual recurive traversal of the BST. It's used as helper method by tree to insert a new node to *BST**.
+#### [**FindTreeMin**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L198):
+  - **Description**: Use the existing tree's root to go to the leftmost downside element and return the value.
 
-  - **Signature**: ``` func (t *TreeNode) Find(Value int) (TreeNode, bool)  ``` - the tree root is provided as initial parameter to traverse.
+  - **Signature**: ``` func (t *BSTree) FindTreeMin() int   ``` - The tree root from tree object is used to traverse, recursively traversed by helper.
 
-  - **Returned Value**: Returns the node if found, empty record if not, true/false boolean depending succes or falure of the search.
+  - **Returned Value**: Returns the minimal value if found
 
 
 #### [**InsertNode**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L30):
@@ -239,7 +239,7 @@ type BSTree struct {
   - **Returned Value**: Returns no values
 
 
-#### [**Insert**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L40):
+#### [**Insert**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L41):
   - **Description**: Node Object method receives the tree root and does the actual recurive traversal of the BST. It's used as helper method by tree to insert a new node to *BST**.
 
   - **Signature**: ``` func (n *TreeNode) Insert(Val int)  ``` - the tree root is provided as initial parameter to traverse.
@@ -247,7 +247,7 @@ type BSTree struct {
   - **Returned Value**: Returns no values
 
 
-#### [**MaxTreeDepth**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L30):
+#### [**MaxTreeDepth**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L322):
   - **Description**: **BST** Object method allowing to get the starting node (root), value to check and return depth at which the value is located.
 
   - **Signature**: ``` func (t *BSTree) MaxTreeDepth() int  ```
@@ -255,7 +255,7 @@ type BSTree struct {
   - **Returned Value**: Depth at which the value was found in **BST**.
 
 
-#### [**MaxDepth**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L30):
+#### [**MaxDepth**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L300):
   - **Description**: **BST** Object method allowing to get the starting node (root), value to check and return depth at which the value is located.
 
   - **Signature**: ``` func MaxDepth(node *TreeNode) int ```
@@ -263,7 +263,7 @@ type BSTree struct {
   - **Returned Value**: Depth at which the value was found in **BST**.
 
 
-#### [**NodeDepth**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L30):
+#### [**NodeDepth**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L280):
   - **Description**: **BST** Object method allowing to get the starting node (root), value to check and return depth at which the value is located.
 
   - **Signature**: ``` func NodeDepth(node *TreeNode, Val int, Depth int) int ```
@@ -271,7 +271,7 @@ type BSTree struct {
   - **Returned Value**: Depth at which the value was found in **BST**.
 
 
-#### [**inNodes**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L30):
+#### [**inNodes**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L230):
   - **Description**: Helper function to check if the value is found in slice or not.
 
   - **Signature**: ``` func inNodes(nodes *[]TreeNode, v *TreeNode) bool  ```
@@ -279,23 +279,23 @@ type BSTree struct {
   - **Returned Value**: Returns boolean - **true** if value was found in slice, **false** otherwise.
 
 
-#### [**PrintTree**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L30):
+#### [**PrintTree**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L74):
   - **Description**: **BST** Object method allowing to print the entire tree by using the helper call to recursively traverse the tree.
 
-  - **Signature**: ``` func (tree *BSTree) Print() ```
+  - **Signature**: ``` func (tree *BSTree) PrintTree() ```
 
   - **Returned Value**: Returns no values
 
 
-#### [**Print**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L40):
+#### [**Print**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L60):
   - **Description**: Print the tree by recurively traversing it starting at the root level.
 
-  - **Signature**: ``` func print(w io.Writer, node *TreeNode, ns int, ch rune)  ``` - gets the tree root, start at level 0 and mark it as 'M' - middle.
+  - **Signature**: ``` func Print(w io.Writer, node *TreeNode, ns int, ch rune)  ``` - gets the tree root, start at level 0 and mark it as 'M' - middle.
 
   - **Returned Value**: Returns no values
 
 
-#### [**TreeSearch**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L30):
+#### [**TreeSearch**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L160):
   - **Description**: **BST** Object method allowing search for a value in the tree and return true or false depending on outcome.
 
   - **Signature**: ``` func (t *BSTree) TreeSearch(v int) bool ``` - receives the value to find.
@@ -303,7 +303,7 @@ type BSTree struct {
   - **Returned Value**: Returns **true** if value was found, **false** otherwise.
 
 
-#### [**Search**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L40):
+#### [**Search**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L166):
   - **Description**: Helper functionality to recursively search tree and return true when value is found, false otherwise.
 
   - **Signature**: ``` func (n *TreeNode) Search(v int) bool   ``` - receives the value to find.
@@ -311,7 +311,7 @@ type BSTree struct {
   - **Returned Value**: Returns **true** if value was found, **false** otherwise.
 
 
-#### [**TreeFromArray**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L30):
+#### [**TreeFromArray**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L222):
   - **Description**: **BST** Object method allowing search for a value in the tree and return true or false depending on outcome.
 
   - **Signature**: ``` func TreeFromArray(nodes []int) *BSTree ``` - receives the slice of values to construct tree.
@@ -319,12 +319,12 @@ type BSTree struct {
   - **Returned Value**: Returns the pointer to the root of the newly created **BST**.
 
 
-#### [**TreeSize**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L30):
+#### [**TreeSize**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L318):
   - **Description**: **BST** Object method allowing search for a value in the tree and return true or false depending on outcome.
 
-  - **Signature**: ``` func (t *BSTree) TreeSearch(v int) bool ``` - receives the value to find.
+  - **Signature**: ``` func (t *BSTree) TreeSize() int  ``` - receives the value to find.
 
-  - **Returned Value**: Returns **true** if value was found, **false** otherwise.
+  - **Returned Value**: Returns the current size of the **BST**.
 
 ## Running the project
 ### Running the main program
