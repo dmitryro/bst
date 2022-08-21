@@ -77,7 +77,7 @@ type Queue[T any] []T
 
   - **Assumptions**:  A new queue has been initialized, a value has been enqueued and then dequeued from the queue.
 
-  - **Asserted Success**: The size of queue after value is removed is 0.
+  - **Asserted Success**: The size of queue after value is removed *is* 0.
 
   - **Asserted Failure**: The size of queue after value is removed is *not* 0. 
 
@@ -89,7 +89,7 @@ type Queue[T any] []T
 
   - **Assumptions**: A new queue has been initialized and a value is enqueued into the queue.
 
-  - **Asserted Success**: The size of queue is 1.
+  - **Asserted Success**: The size of queue *is* 1.
 
   - **Asserted Failure**: The size of queue is *not* 1.
 
@@ -101,7 +101,7 @@ type Queue[T any] []T
 
   - **Assumptions**: For the sake of unit test, a new queue is initialized and 3 values added to the queue
 
-  - **Asserted Success**: The size of queue is 3.
+  - **Asserted Success**: The size of queue *is* 3.
 
   - **Asserted Failure**: The size of queue is *not* 3.
 
