@@ -26,15 +26,26 @@ type Queue[T any] []T
 * Please note - versions before 1.18 do not support generic types, so please make sure at least Go version 1.18 is used.
 
 
-## Methods
+### Methods
 
 
-## Tests
+### Tests
 
 
 ## Binary Search Tree
 ### Data Structures
-#### 
+#### TreeNode
+
+This type is used to represent a tree node with value, left and right children, and depth:
+```
+type TreeNode struct {
+    Val   int
+    Left  *TreeNode
+    Right *TreeNode
+    Depth int
+}
+``` 
+
 
 ### Methods
 ####
