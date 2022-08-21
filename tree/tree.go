@@ -150,8 +150,14 @@ func (t *TreeNode) Delete(Value int) *TreeNode {
 }
 
 
+// Search Tree - Checks whether the tree has a node
+func (t *BSTree) TreeSearch(v int) bool {
+    return t.Root.Search(v)
+}
+
+
 // Search - Checks whether the tree has a node
-func (n *TreeNode) Search(v int)bool{
+func (n *TreeNode) Search(v int) bool {
 	if n == nil {
 		return false
 	}

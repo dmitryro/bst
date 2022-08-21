@@ -87,6 +87,28 @@ func TestFindNode(t *testing.T) {
    fmt.Println("Find")
 }
 
+func TestTreeSearch(t *testing.T) {
+   l := []int{12, 11, 90, 82, 7, 9}
+   tree:= TreeFromArray(l)
+   found := tree.TreeSearch(82)
+
+   if found == true {
+       fmt.Printf("Successfully searched tree for element %d - it was found.\n", 82)
+   } else {
+       t.Errorf("Failed searching the tree for element %d - it was not found\n", 82)
+   }
+   
+   more_found := tree.TreeSearch(32)
+   if more_found == false {
+       fmt.Printf("Successfully searched tree for element %d - it was never inserted and was not found.\n", 32)
+   } else {
+       t.Errorf("Failed searching the tree for element %d - it was never inserted but was found\n", 32)
+   }
+   
+
+   fmt.Println("Find")
+}
+
 func TestFindTreeMin(t *testing.T) {
    l := []int{12, 11, 90, 82, 7, 9}
    tree:= TreeFromArray(l)

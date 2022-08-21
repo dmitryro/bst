@@ -189,6 +189,21 @@ type BSTree struct {
   - **Returned Value**: Returns the node if found, empty record if not, true/false boolean depending succes or falure of the search.
 
 
+#### [**FindTreeMax**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L40):
+  - **Description**: Node Object method receives the tree root and does the actual recurive traversal of the BST. It's used as helper method by tree to insert a new node to *BST**.
+
+  - **Signature**: ``` func (t *TreeNode) Find(Value int) (TreeNode, bool)  ``` - the tree root is provided as initial parameter to traverse.
+
+  - **Returned Value**: Returns the node if found, empty record if not, true/false boolean depending succes or falure of the search.
+
+
+#### [**FindTreeMin**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L40):
+  - **Description**: Node Object method receives the tree root and does the actual recurive traversal of the BST. It's used as helper method by tree to insert a new node to *BST**.
+
+  - **Signature**: ``` func (t *TreeNode) Find(Value int) (TreeNode, bool)  ``` - the tree root is provided as initial parameter to traverse.
+
+  - **Returned Value**: Returns the node if found, empty record if not, true/false boolean depending succes or falure of the search.
+
 
 #### [**InsertNode**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L30):
   - **Description**: **BST** Object method allowing to add a new node to **BST**.
@@ -220,6 +235,22 @@ type BSTree struct {
   - **Signature**: ``` func print(w io.Writer, node *TreeNode, ns int, ch rune)  ``` - gets the tree root, start at level 0 and mark it as 'M' - middle.
 
   - **Returned Value**: Returns no values
+
+
+#### [**TreeSearch**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L30):
+  - **Description**: **BST** Object method allowing search for a value in the tree and return true or false depending on outcome.
+
+  - **Signature**: ``` func (t *BSTree) TreeSearch(v int) bool ``` - receives the value to find.
+
+  - **Returned Value**: Returns **true** if value was found, **false** otherwise.
+
+
+#### [**Search**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L40):
+  - **Description**: Helper functionality to recursively search tree and return true when value is found, false otherwise.
+
+  - **Signature**: ``` func (n *TreeNode) Search(v int) bool   ``` - receives the value to find.
+
+  - **Returned Value**: Returns **true** if value was found, **false** otherwise.
 
 
 
