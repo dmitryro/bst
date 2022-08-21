@@ -7,7 +7,7 @@ import (
     "math"
     "dmitryro.com/queue"
 )
-
+// Data Structure to be used with BST nodes to handle tree traversal 
 type TreeNode struct {
     Val   int
     Left  *TreeNode
@@ -15,18 +15,19 @@ type TreeNode struct {
     Depth int
 }
 
-
+// Data Structure to return BST nodes with their depths
 type NodeItem struct {
     Val int
     Depth int
 }
 
-
+// Data Structure to represent BST and its size
 type BSTree struct {
     Size int
     Root *TreeNode
 }
 
+// A BST method to insert a new node in the tree
 func (t *BSTree) InsertNode(Val int) *BSTree {
     if t.Root == nil {
         t.Root = &TreeNode{Val: Val, Left: nil, Right: nil}
@@ -37,6 +38,7 @@ func (t *BSTree) InsertNode(Val int) *BSTree {
     return t
 }
 
+// A helper Insert method to be used with tree recursively traverse and append new value
 func (n *TreeNode) Insert(Val int) {
     if n == nil {
         return
@@ -55,6 +57,7 @@ func (n *TreeNode) Insert(Val int) {
     }
 }
 
+// Print the BST out starting at the root and attaching labels "L" for left, "R" for right sibling
 func Print(w io.Writer, node *TreeNode, ns int, ch rune) {
     if node == nil {
         return
@@ -68,10 +71,12 @@ func Print(w io.Writer, node *TreeNode, ns int, ch rune) {
     Print(w, node.Right, ns+2, 'R')
 }
 
+// Print the BST out using recurive helper
 func (tree *BSTree) PrintTree() {
     Print(os.Stdout, tree.Root, 0, 'M')
 }
 
+// BST object method that uses helper to recursively travese tree and find node by value
 func (tree *BSTree) FindNode(Val int) *NodeItem{
      node, found := tree.Root.Find(Val)
      var item = &NodeItem{Val, -1}
@@ -82,7 +87,8 @@ func (tree *BSTree) FindNode(Val int) *NodeItem{
      } 
      return item
 }
-
+// A recursive helper used to traverse tree and find a node by value.
+//  if found or not returns node itself and  true or false accordingly
 func (t *TreeNode) Find(Value int) (TreeNode, bool) {
 
     if t == nil {
@@ -105,6 +111,7 @@ func (t *BSTree) DeleteNode(Value int) {
     t.Size--
 }
 
+// Helper used to recursively traverse and delete a node from tree
 func (t *TreeNode) Delete(Value int) *TreeNode {
 
     if t == nil {
@@ -172,7 +179,7 @@ func (n *TreeNode) Search(v int) bool {
 	return true
 }
 
-
+// Traverse BST to the downmost right node and find the maximal value, return when found
 func (t *BSTree) FindTreeMax() int {
       current := t.Root
       var val = int(math.Inf(-1))
@@ -188,6 +195,7 @@ func (t *BSTree) FindTreeMax() int {
       return val
 }
 
+//  Traverse BST to the downmost left node  and find the minimal value, return when found
 func (t *BSTree) FindTreeMin() int {
       current := t.Root
       var val = int(math.Inf(1))
@@ -203,12 +211,14 @@ func (t *BSTree) FindTreeMin() int {
       return val
 }
 
+// Use helper BFS search and queue to find the list of deepest nodes in the tree
 func (t *BSTree) DeepestNodes() []TreeNode {
     var bfsP =  findDeepestBFS(t.Root)
     bfs := *bfsP
     return bfs
 }
 
+// Construct a new tree from a list of integer values
 func TreeFromArray(nodes []int) *BSTree{
     tree := &BSTree{}
     for i := 0; i < len(nodes); i++ {
@@ -217,15 +227,19 @@ func TreeFromArray(nodes []int) *BSTree{
     return tree
 }
 
-func notInNodes(nodes *[]TreeNode, v *TreeNode) bool {
+// Go over values in list and return false if found, true if found
+func inNodes(nodes *[]TreeNode, v *TreeNode) bool {
     for i := 0; i < len(*nodes); i++ {
         if (*nodes)[i].Val == (*v).Val {
-            return false
+            return true
         }
     }
-    return true
+    return false
 }
 
+// Helper used to perform the actual discovery of deepest nodes
+// Uses queue from queue package to do the BFS search for deepest nodes
+// Returns slice with deepest nodes in it.
 func findDeepestBFS(root *TreeNode) *[]TreeNode {
     q := new(queue.Queue[*TreeNode])
     q.Enqueue(root)
@@ -241,7 +255,7 @@ func findDeepestBFS(root *TreeNode) *[]TreeNode {
            break
         }
         for i := 0; i < q.Size(); i++ {
-            if notInNodes(&nodes, v) == true {
+            if inNodes(&nodes, v) == false {
                 nodes = append(nodes, (*v))
             }
         }
@@ -263,6 +277,8 @@ func findDeepestBFS(root *TreeNode) *[]TreeNode {
     return &nodes
 }
 
+// Recursively traverse tree to find the depth of a node with value
+// Return -1 if not found, positive integer number otherwise.
 func NodeDepth(node *TreeNode, Val int, Depth int) int {
     if node == nil {
         return -1
@@ -281,6 +297,8 @@ func NodeDepth(node *TreeNode, Val int, Depth int) int {
     }
 }
 
+// Recursively traverse the tree and find the max depth of it
+// Return -1 if empty, positive integer number for depth otherwise.
 func MaxDepth(node *TreeNode) int {
     if node == nil {
         return -1
@@ -296,15 +314,21 @@ func MaxDepth(node *TreeNode) int {
     }
 }
 
+// Return the current tree size
 func (t *BSTree) TreeSize() int {
      return t.Size
 }
 
+// BST method to compute the max tree depth
+// Uses recursive helper to traverse the tree from root
 func (t *BSTree) MaxTreeDepth() int {
      depth := MaxDepth(t.Root)
      return depth
 }
 
+// BST method used to find the max depth and all the tree nodes
+// Gets all the deepest nodes and attaches depth value to them
+// Returns list of NodeItem objects that have values and depths.
 func  (t *BSTree) DeepestNodeWithDepth() *[]NodeItem{
     var deepestItems []NodeItem = make([]NodeItem, 0)
     deepest := t.DeepestNodes()

@@ -271,10 +271,10 @@ type BSTree struct {
   - **Returned Value**: Depth at which the value was found in **BST**.
 
 
-#### [**notInNodes**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L30):
+#### [**inNodes**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L30):
   - **Description**: Helper function to check if the value is found in slice or not.
 
-  - **Signature**: ``` func notInNodes(nodes *[]TreeNode, v *TreeNode) bool  ```
+  - **Signature**: ``` func inNodes(nodes *[]TreeNode, v *TreeNode) bool  ```
 
   - **Returned Value**: Returns boolean - **true** if value was found in slice, **false** otherwise.
 
