@@ -16,9 +16,9 @@ To successfully run the project some initial assumptions need to be made:
 
 **Go 1.18 SDK** or later must be installed in your system.
 
-**GOROOT** should point to the proper Go SDK location.
+**GOROOT** environment vairable should point to the proper Go SDK location.
 
-**GOPATH** should be pointing to  a valid workspace.
+**GOPATH** environment variable should be pointing to  a valid workspace.
 
 **Queue** data structure is used to implement **BFS** search. We use a custom implementation, while alternative 
       third party implementations exist.
