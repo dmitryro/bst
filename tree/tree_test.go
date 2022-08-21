@@ -5,6 +5,10 @@ import (
     "testing"
 )
 
+// Test inserting a new value to BST
+// Create a new BST from the list of 6 values
+// Insert a new node with value 15 to the tree
+// Assert success if new tree size is 7, assert failure othewise
 func TestInsert(t *testing.T) {
    l := []int{12, 11, 90, 82, 7, 9}
    tree:= TreeFromArray(l)
@@ -20,6 +24,10 @@ func TestInsert(t *testing.T) {
    fmt.Println("Insert")
 }
 
+// Test deleting a value from BST
+// Create a new BST from the list of 6 values
+// Delete a node with value 90 from the tree
+// Assert success if new tree size is 5, assert failure othewise
 func TestDelete(t *testing.T) {
    l := []int{12, 11, 90, 82, 7, 9}
    tree:= TreeFromArray(l)
@@ -35,6 +43,9 @@ func TestDelete(t *testing.T) {
    fmt.Println("Delete")
 }
 
+// Test valid sizing of BST
+// Create a new BST from the list of 6 values and compute size
+// Assert success if tree size is 6, assert failure othewise
 func TestTreeSize(t *testing.T) {
    l := []int{12, 11, 90, 82, 7, 9}
    tree:= TreeFromArray(l)
@@ -47,6 +58,10 @@ func TestTreeSize(t *testing.T) {
    }
 }
 
+// Test returning all the nodes from the deepest level
+// Create a new BST with 6 nodes in it
+// Read the deepest nodes of the tree
+// If the call returns 2 elements - assert success, if no - assert failure
 func TestDeepest(t *testing.T) {
    l := []int{12, 11, 90, 82, 7, 9}
    tree:= TreeFromArray(l)
@@ -60,6 +75,10 @@ func TestDeepest(t *testing.T) {
    fmt.Println("Deepest")
 }
 
+
+// Test computing the maximal depth of the tree
+// Create a test tree from list of values specified
+// Compute the depth - assert success if the depth is 3, assert failure otherwise
 func TestMaxDepth(t *testing.T) {
    l := []int{12, 11, 90, 82, 7, 9}
    tree:= TreeFromArray(l)
