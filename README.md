@@ -6,7 +6,7 @@ To run the project, clone it to your loccal environment:
 ```
   git clone git@github.com:dmitryro/bst.git
 ```
-Please have Go 1.18 or later installed, if not installed - please follow the instructions in the next section.
+Please have [**Go 1.18**](https://go.dev/dl/) or later installed, if not installed - please follow the instructions in the next section.
 Please refer to this README document or comments within code if additional clarifications are needed.
 
 
