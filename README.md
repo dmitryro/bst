@@ -8,12 +8,14 @@ Binary Tree Implementation using Go, Queue and Tree data structures, Breadth Fir
 
 
 ## Installing Go 1.18 or later
+Please follow the [instructions](https://www.digitalocean.com/community/tutorial_collections/how-to-install-go) based on
+what system you use.
 
 
 ## Initial Assumptions
 To successfully run the project some initial assumptions need to be made:
 
-**Go 1.18 SDK** or later must be installed on the system.
+**Go 1.18 SDK** or later must be installed in your system.
 
 **GOROOT** should point to the proper Go SDK location.
 
