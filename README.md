@@ -46,7 +46,7 @@ type Queue[T any] []T
 
 
 ### Methods
-#### **Enqueue**:
+#### [**Enqueue**](https://github.com/dmitryro/gotests/blob/master/queue/queue.go#L6):
   - **Description**: Add a new item to the **Queue**.
 
   - **Signature**: ``` func (q *Queue[T]) Enqueue(v T)  ```
@@ -54,7 +54,7 @@ type Queue[T any] []T
   - **Returned Value**: Returns no values
 
 
-#### **Dequeue**: 
+#### [**Dequeue**](https://github.com/dmitryro/gotests/blob/master/queue/queue.go#L11): 
   - **Description**: Remove an item from the top of the **Queue**.
 
   - **Signature**: ``` func (q *Queue[T]) Dequeue() (T, bool)  ```
@@ -63,7 +63,7 @@ type Queue[T any] []T
 
 
 
-#### **Size**
+#### [**Size**](https://github.com/dmitryro/gotests/blob/master/queue/queue.go#L23)
   - **Description**: Return the current size of the **Queue**.
   - **Signature**: ``` func (q *Queue[T]) Size() int ```
   - **Returned Value**: Returns **int** value of the queue size.
