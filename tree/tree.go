@@ -77,7 +77,7 @@ func (tree *BSTree) FindNode(Val int) *NodeItem{
      var item = &NodeItem{Val, -1}
 
      if found {
-         depth := nodeDepth(tree.Root, Val, 1)
+         depth := NodeDepth(tree.Root, Val, 1)
          item = &NodeItem{node.Val, depth}
      } 
      return item
@@ -203,11 +203,6 @@ func (t *BSTree) FindTreeMin() int {
       return val
 }
 
-
-func (t *BSTree) TreeDepth() int {
-    return maxDepth(t.Root)
-}
-
 func (t *BSTree) DeepestNodes() []TreeNode {
     var bfsP =  findDeepestBFS(t.Root)
     bfs := *bfsP
@@ -268,12 +263,12 @@ func findDeepestBFS(root *TreeNode) *[]TreeNode {
     return &nodes
 }
 
-func nodeDepth(node *TreeNode, Val int, Depth int) int {
+func NodeDepth(node *TreeNode, Val int, Depth int) int {
     if node == nil {
         return -1
     } else {
-        lDepth := nodeDepth(node.Left, Val, Depth+1)
-        rDepth := nodeDepth(node.Right, Val, Depth+1)
+        lDepth := NodeDepth(node.Left, Val, Depth+1)
+        rDepth := NodeDepth(node.Right, Val, Depth+1)
         if node.Val != Val {
             if lDepth > rDepth {
                 return lDepth
@@ -286,12 +281,12 @@ func nodeDepth(node *TreeNode, Val int, Depth int) int {
     }
 }
 
-func maxDepth(node *TreeNode) int {
+func MaxDepth(node *TreeNode) int {
     if node == nil {
         return -1
     } else {
-        lDepth := maxDepth(node.Left)
-        rDepth := maxDepth(node.Right)
+        lDepth := MaxDepth(node.Left)
+        rDepth := MaxDepth(node.Right)
 
         if lDepth > rDepth {
             return lDepth+1
@@ -306,14 +301,14 @@ func (t *BSTree) TreeSize() int {
 }
 
 func (t *BSTree) MaxTreeDepth() int {
-     depth := maxDepth(t.Root)
+     depth := MaxDepth(t.Root)
      return depth
 }
 
 func  (t *BSTree) DeepestNodeWithDepth() *[]NodeItem{
     var deepestItems []NodeItem = make([]NodeItem, 0)
     deepest := t.DeepestNodes()
-    depth := maxDepth(t.Root)
+    depth := MaxDepth(t.Root)
     for i:= 0; i < len(deepest); i++ {
        dp := NodeItem{Val:deepest[i].Val, Depth:depth}
        deepestItems = append(deepestItems, dp)

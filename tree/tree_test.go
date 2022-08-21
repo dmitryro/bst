@@ -137,7 +137,7 @@ func TestTreeFromArray(t *testing.T) {
    l1 := []int{12, 11, 90, 82, 7, 9}
    t1 := TreeFromArray(l1)
 
-   if t1.TreeDepth() == 3 {
+   if t1.MaxTreeDepth() == 3 {
        fmt.Printf("Successfully created a tree with depth - %d\n", 3)
    } else {
        t.Errorf("Failed creating a tree with depth - %d\n", 3)
@@ -146,7 +146,7 @@ func TestTreeFromArray(t *testing.T) {
    l2 := []int{26, 82, 16, 92, 33}
    t2 := TreeFromArray(l2)
 
-   if t2.TreeDepth() == 2 {
+   if t2.MaxTreeDepth() == 2 {
        fmt.Printf("Successfully created a tree with depth - %d\n", 2)
    } else {
        t.Errorf("Failed creating a tree with depth - %d\n", 2)

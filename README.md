@@ -24,6 +24,8 @@ To successfully run the project some initial assumptions need to be made:
       third party implementations exist.
 
 **Tree** and **Queue** behaviors are covered by unit tests, to run which please follow the instructions below.
+
+**Capitalized Method and Function Naming Notation** will be used to expose behaviors outside package.
      
 
 ## How to Import
@@ -157,6 +159,22 @@ type BSTree struct {
 ```
 
 ### Methods
+#### [**DeepestNodeWithDepth**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L30):
+  - **Description**: **BST** Object method finding the largest depth and finding the nodes at this deepest level.
+
+  - **Signature**: ``` func  (t *BSTree) DeepestNodeWithDepth() *[]NodeItem  ```
+
+  - **Returned Value**: Returns a list of **NodeItem** objects with values and their depths found at the deepest level of the tree.
+
+
+#### [**DeepestNodes**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L30):
+  - **Description**: **BST** Object method finding the nodes with the larges depth using DFS helper call utilizing queue structure.
+
+  - **Signature**: ``` func  (t *BSTree) DeepestNodeWithDepth() *[]NodeItem  ```
+
+  - **Returned Value**: Returns a list of **NodeItem** objects with values and their depths found at the deepest level of the tree.
+
+
 #### [**DeleteNode**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L30):
   - **Description**: **BST** Object method allowing to add a new node to **BST**.
 
@@ -221,6 +239,30 @@ type BSTree struct {
   - **Returned Value**: Returns no values
 
 
+#### [**MaxTreeDepth**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L30):
+  - **Description**: **BST** Object method allowing to get the starting node (root), value to check and return depth at which the value is located.
+
+  - **Signature**: ``` func (t *BSTree) MaxTreeDepth() int  ```
+
+  - **Returned Value**: Depth at which the value was found in **BST**.
+
+
+#### [**MaxDepth**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L30):
+  - **Description**: **BST** Object method allowing to get the starting node (root), value to check and return depth at which the value is located.
+
+  - **Signature**: ``` func NodeDepth(node *TreeNode, Val int, Depth int) int ```
+
+  - **Returned Value**: Depth at which the value was found in **BST**.
+
+
+#### [**NodeDepth**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L30):
+  - **Description**: **BST** Object method allowing to get the starting node (root), value to check and return depth at which the value is located.
+
+  - **Signature**: ``` func NodeDepth(node *TreeNode, Val int, Depth int) int ```
+
+  - **Returned Value**: Depth at which the value was found in **BST**.
+
+
 #### [**PrintTree**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L30):
   - **Description**: **BST** Object method allowing to print the entire tree by using the helper call to recursively traverse the tree.
 
@@ -253,6 +295,12 @@ type BSTree struct {
   - **Returned Value**: Returns **true** if value was found, **false** otherwise.
 
 
+#### [**TreeSize**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L30):
+  - **Description**: **BST** Object method allowing search for a value in the tree and return true or false depending on outcome.
+
+  - **Signature**: ``` func (t *BSTree) TreeSearch(v int) bool ``` - receives the value to find.
+
+  - **Returned Value**: Returns **true** if value was found, **false** otherwise.
 
 ## Running the project
 ### Running the main program
