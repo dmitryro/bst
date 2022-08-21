@@ -36,7 +36,7 @@ Please see example in [main.go](https://github.com/dmitryro/gotests/blob/master/
 
 
 
-## Queue 
+## [Queue](https://github.com/dmitryro/gotests/blob/master/queue/queue.go)
 ### Data Structures:
 #### Generic Queue Type is used to allow reuse for different types
 ```
@@ -72,7 +72,7 @@ type Queue[T any] []T
 ### Tests
 
 
-## Binary Search Tree
+## [Binary Search Tree](https://github.com/dmitryro/gotests/blob/master/tree/tree.go)
 ### Data Structures
 #### TreeNode
 
