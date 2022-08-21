@@ -73,6 +73,9 @@ func TestMaxDepth(t *testing.T) {
    fmt.Println("Max Depth")
 }
 
+// Test finding a node with depth in BST
+// Create a test tree from list of values specified
+// Find node with value 82 and assert success if value found and depth is 3, assert failure otherwise
 func TestFindNode(t *testing.T) {
    l := []int{12, 11, 90, 82, 7, 9}
    tree:= TreeFromArray(l)
@@ -87,6 +90,11 @@ func TestFindNode(t *testing.T) {
    fmt.Println("Find")
 }
 
+// Test searching for an element in BST
+// Create a test tree from list of values specified
+// Value 82 is in the tree, value 32 is not
+// For value 82 assert success if found, failure if not found
+// For value 32 assert success if not found, failure if found
 func TestTreeSearch(t *testing.T) {
    l := []int{12, 11, 90, 82, 7, 9}
    tree:= TreeFromArray(l)
@@ -109,6 +117,9 @@ func TestTreeSearch(t *testing.T) {
    fmt.Println("Find")
 }
 
+// Test finding minimal value in BST
+// Construct a test tree from the list of values
+// Assert success if min value is 7, assert failure otherwise
 func TestFindTreeMin(t *testing.T) {
    l := []int{12, 11, 90, 82, 7, 9}
    tree:= TreeFromArray(l)
@@ -121,6 +132,9 @@ func TestFindTreeMin(t *testing.T) {
    fmt.Println("Find Min")
 }
 
+// Test finding maximal value in BST
+// Construct a test tree from the list of values
+// Assert success if max value is 90, assert failure otherwise
 func TestFindTreeMax(t *testing.T) {
    l := []int{12, 11, 90, 82, 7, 9}
    tree:= TreeFromArray(l)
@@ -133,6 +147,10 @@ func TestFindTreeMax(t *testing.T) {
    fmt.Println("Find Max")
 }
 
+// Test constructing BST from a list of values
+// Construct two test trees
+// For the first tree, assert success if depth is 3, assert failure otherwise
+// For the second tree, assert success if depth is 2, assert failure othewise
 func TestTreeFromArray(t *testing.T) {
    l1 := []int{12, 11, 90, 82, 7, 9}
    t1 := TreeFromArray(l1)
