@@ -71,6 +71,26 @@ type TreeNode struct {
 }
 ``` 
 
+#### NodeItem
+
+This type is used to return the value and the depth of a found node or list of nodes.
+```
+type NodeItem struct {
+    Val int
+    Depth int
+}
+```
+
+#### BSTree
+
+This type represents the tree itself - pointer to the root node and the current size of the tree. Using it
+allows better design of tree-specific methods and behaviors.
+```
+type BSTree struct {
+    Size int
+    Root *TreeNode
+}
+```
 
 ### Methods
 ####
