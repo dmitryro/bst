@@ -8,7 +8,7 @@ import (
 func TestInsert(t *testing.T) {
    l := []int{12, 11, 90, 82, 7, 9}
    tree:= TreeFromArray(l)
-   tree.Insert(15)
+   tree.InsertNode(15)
    
    size := tree.TreeSize()
    if size == 7 {
@@ -23,7 +23,7 @@ func TestInsert(t *testing.T) {
 func TestDelete(t *testing.T) {
    l := []int{12, 11, 90, 82, 7, 9}
    tree:= TreeFromArray(l)
-   tree.Delete(90)
+   tree.DeleteNode(90)
 
    size := tree.TreeSize()
    if size == 5 {

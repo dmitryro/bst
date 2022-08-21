@@ -27,7 +27,7 @@ type BSTree struct {
     Root *TreeNode
 }
 
-func (t *BSTree) Insert(Val int) *BSTree {
+func (t *BSTree) InsertNode(Val int) *BSTree {
     if t.Root == nil {
         t.Root = &TreeNode{Val: Val, Left: nil, Right: nil}
     } else {
@@ -55,7 +55,7 @@ func (n *TreeNode) Insert(Val int) {
     }
 }
 
-func print(w io.Writer, node *TreeNode, ns int, ch rune) {
+func Print(w io.Writer, node *TreeNode, ns int, ch rune) {
     if node == nil {
         return
     }
@@ -64,12 +64,12 @@ func print(w io.Writer, node *TreeNode, ns int, ch rune) {
         fmt.Fprint(w, " ")
     }
     fmt.Fprintf(w, "%c:%v\n", ch, node.Val)
-    print(w, node.Left, ns+2, 'L')
-    print(w, node.Right, ns+2, 'R')
+    Print(w, node.Left, ns+2, 'L')
+    Print(w, node.Right, ns+2, 'R')
 }
 
-func (tree *BSTree) Print() {
-    print(os.Stdout, tree.Root, 0, 'M')
+func (tree *BSTree) PrintTree() {
+    Print(os.Stdout, tree.Root, 0, 'M')
 }
 
 func (tree *BSTree) FindNode(Val int) *NodeItem{
@@ -99,24 +99,24 @@ func (t *TreeNode) Find(Value int) (TreeNode, bool) {
     }
 }
 
-//Delete removes the Item with Value from the tree
-func (t *BSTree) Delete(Value int) {
-    t.Root.remove(Value)
+//DeleteNode Deletes the Item with Value from the tree
+func (t *BSTree) DeleteNode(Value int) {
+    t.Root.Delete(Value)
     t.Size--
 }
 
-func (t *TreeNode) remove(Value int) *TreeNode {
+func (t *TreeNode) Delete(Value int) *TreeNode {
 
     if t == nil {
         return nil
     }
 
     if Value < t.Val {
-        t.Left = t.Left.remove(Value)
+        t.Left = t.Left.Delete(Value)
         return t
     }
     if Value > t.Val {
-        t.Right = t.Right.remove(Value)
+        t.Right = t.Right.Delete(Value)
         return t
     }
 
@@ -145,7 +145,7 @@ func (t *TreeNode) remove(Value int) *TreeNode {
     }
 
     t.Val = smallestValOnRight.Val
-    t.Right = t.Right.remove(t.Val)
+    t.Right = t.Right.Delete(t.Val)
     return t
 }
 
@@ -211,7 +211,7 @@ func (t *BSTree) DeepestNodes() []TreeNode {
 func TreeFromArray(nodes []int) *BSTree{
     tree := &BSTree{}
     for i := 0; i < len(nodes); i++ {
-       tree.Insert(nodes[i])
+       tree.InsertNode(nodes[i])
     }
     return tree
 }

@@ -157,6 +157,23 @@ type BSTree struct {
 ```
 
 ### Methods
+#### [**Find**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L30):
+  - **Description**: **BST** Object method allowing to add a new node to **BST**.
+
+  - **Signature**: ``` func (t *BSTree) Insert(Val int) *BSTree  ```
+
+  - **Returned Value**: Returns no values
+
+
+#### [**FindNode**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L40):
+  - **Description**: Node Object method receives the tree root and does the actual recurive traversal of the BST. It's used as helper method by tree to insert a new node to *BST**.
+
+  - **Signature**: ``` func (n *TreeNode) Insert(Val int)  ``` - the tree root is provided as initial parameter to traverse.
+
+  - **Returned Value**: Returns no values
+
+
+
 #### [**Insert (tree method)**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L30):
   - **Description**: **BST** Object method allowing to add a new node to **BST**.
 
@@ -174,17 +191,17 @@ type BSTree struct {
 
 
 #### [**Print**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L30):
-  - **Description**: **BST** Object method allowing to add a new node to **BST**.
+  - **Description**: **BST** Object method allowing to print the entire tree by using the helper call to recursively traverse the tree.
 
-  - **Signature**: ``` func (t *BSTree) Insert(Val int) *BSTree  ```
+  - **Signature**: ``` func (tree *BSTree) Print() ```
 
   - **Returned Value**: Returns no values
 
 
 #### [**print**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L40):
-  - **Description**: Node Object method receives the tree root and does the actual recurive traversal of the BST. It's used as helper method by tree to insert a new node to *BST**.
+  - **Description**: Print the tree by recurively traversing it starting at the root level.
 
-  - **Signature**: ``` func (n *TreeNode) Insert(Val int)  ``` - the tree root is provided as initial parameter to traverse.
+  - **Signature**: ``` func print(w io.Writer, node *TreeNode, ns int, ch rune)  ``` - gets the tree root, start at level 0 and mark it as 'M' - middle.
 
   - **Returned Value**: Returns no values
 

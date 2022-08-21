@@ -7,7 +7,7 @@ import (
 
 func printTree(l []int) {
     t := tree.TreeFromArray(l)
-    t.Print()
+    t.PrintTree()
     dn := t.DeepestNodeWithDepth()
     for i := 0; i < len(*dn); i++ {
         fmt.Printf("\nDepth %d Value %d\n", (*dn)[i].Depth, (*dn)[i].Val)
