@@ -232,8 +232,7 @@ go run main.go
 This program will create two sample trees out of lists of values, construct them and search for deepest nodes, 
 print them out with their correpsonding depths.
 
-## Functions
-
+### Functions
 #### [**printTree**](https://github.com/dmitryro/gotests/blob/master/main.go#L8):
   - **Description**: The function initiates new Tree object, prints the generated tree out and prints the deepest nodes of the generated tree.
 
