@@ -32,9 +32,9 @@ type Queue[T any] []T
 
 ### Methods
 #### **Enqueue**
-#### Description: Add a new item to the **Queue**.
-#### Signature: ``` func (q *Queue[T]) Enqueue(v T)  ```
-#### Returns no values
+**Description**: Add a new item to the **Queue**.
+**Signature**: ``` func (q *Queue[T]) Enqueue(v T)  ```
+**Returned Value**: Returns no values
 
 
 #### **Dequeue** 
