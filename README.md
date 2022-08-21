@@ -21,7 +21,7 @@ import (
       "dmitryro.com/queue"
 )
 ```
-Please see example in **tree/tree.go** file.
+Please see example in [tree/tree.go](https://github.com/dmitryro/gotests/blob/master/tree/tree.go) file.
 
 ### Importing the Binary Search Tree
 #### If you're using the queue in your go file, include the following import:
@@ -30,7 +30,7 @@ import (
       "dmitryro.com/tree"
 )
 ```
-Please see example in **main.go** file.
+Please see example in [main.go](https://github.com/dmitryro/gotests/blob/master/main.go) file.
 
 
 
