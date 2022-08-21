@@ -311,6 +311,14 @@ type BSTree struct {
   - **Returned Value**: Returns **true** if value was found, **false** otherwise.
 
 
+#### [**TreeFromArray**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L30):
+  - **Description**: **BST** Object method allowing search for a value in the tree and return true or false depending on outcome.
+
+  - **Signature**: ``` func TreeFromArray(nodes []int) *BSTree ``` - receives the slice of values to construct tree.
+
+  - **Returned Value**: Returns the pointer to the root of the newly created **BST**.
+
+
 #### [**TreeSize**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L30):
   - **Description**: **BST** Object method allowing search for a value in the tree and return true or false depending on outcome.
 
