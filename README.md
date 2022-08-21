@@ -174,6 +174,14 @@ type BSTree struct {
 
 
 
+## Running the project
+### Running the main script
+Once cloned and verified the Go version 1.18 or later is installed, run
+```
+go run main.go
+```
+This script will create two sample trees out of lists of values, construct them and seerch for deepest nodes, 
+print them out with their correpsonding depths.
 
 
 ## Tests
