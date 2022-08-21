@@ -14,8 +14,23 @@ Binary Tree Implementation using Go, Queue and Tree data structures, Breadth Fir
 
 
 ## How to Import
+### Importing the Queue
+#### If you're using the queue in your go file, include the following import:
+```
+import (
+      "dmitryro.com/queue"
+)
+```
+Please see example in **tree/tree.go** file.
 
-
+### Importing the Binary Search Tree
+#### If you're using the queue in your go file, include the following import:
+```
+import (
+      "dmitryro.com/tree"
+)
+```
+Please see example in **main.go** file.
 
 
 
