@@ -1,9 +1,13 @@
 # Go Implementation of Binary Search Tree
-Binary Tree Implementation using Go, Queue and Tree data structures, Breadth First Search for tree traversal.
+Binary Search Tree Implementation using Go, Queue and Tree data structures, Breadth First Search for tree traversal.
 
 ## Getting Started
-
-
+To run the project, clone it to your loccal environment:
+```
+  git clone git@github.com:dmitryro/bst.git
+```
+Please have Go 1.18 or later installed, if not installed - please follow the instructions in the next section.
+Please refer to this README document or comments within code if additional clarifications are needed.
 
 
 ## Installing Go 1.18 or later
