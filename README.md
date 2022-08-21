@@ -31,12 +31,12 @@ type Queue[T any] []T
 
 
 ### Methods
-#### *Enqueue* - add a new item to the *Queue* 
+#### **Enqueue**- add a new item to the queue
 #### ```   ```
 
 #### *Dequeue* - remove an item from the top ofthe *Queue* 
 #### ``` func (q *Queue[T]) Dequeue() (T, bool) ```
-#### *Returns* `true` or `false` in case of `success` or `falure` to dequeue, and the top item removed from teh queue.
+#### Reurns **true** or **false** in case of **success** or **falure** to dequeue, and the top item removed from teh queue.
 ### Tests
 
 
