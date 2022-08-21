@@ -172,7 +172,7 @@ type BSTree struct {
 
   - **Signature**: ``` func  (t *BSTree) DeepestNodeWithDepth() *[]NodeItem  ```
 
-  - **Returned Value**: Returns a list of **NodeItem** objects with values and their depths found at the deepest level of the tree.
+  - **Returned Value**: Returns a list of **TreeNode** objects found at the deepest level of the tree that were fetched by **findDeepestBFS** helper.
 
 
 #### [**DeleteNode**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L30):
@@ -189,6 +189,14 @@ type BSTree struct {
   - **Signature**: ``` func (t *TreeNode) Delete(Value int) *TreeNode  ``` - the tree root is provided as initial parameter to traverse.
 
   - **Returned Value**: Returns no values
+
+
+#### [**findDeepestBFS**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L30):
+  - **Description**: **BST** Object method allowing **BFS** search for deepest nodes using **Queue** structure.
+
+  - **Signature**: ``` func findDeepestBFS(root *TreeNode) *[]TreeNode  ```
+
+  - **Returned Value**: Returns **[]TreeNode** list of pointers to the deepest nodes.
 
 
 #### [**FindNode**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L30):
@@ -250,7 +258,7 @@ type BSTree struct {
 #### [**MaxDepth**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L30):
   - **Description**: **BST** Object method allowing to get the starting node (root), value to check and return depth at which the value is located.
 
-  - **Signature**: ``` func NodeDepth(node *TreeNode, Val int, Depth int) int ```
+  - **Signature**: ``` func MaxDepth(node *TreeNode) int ```
 
   - **Returned Value**: Depth at which the value was found in **BST**.
 
@@ -261,6 +269,14 @@ type BSTree struct {
   - **Signature**: ``` func NodeDepth(node *TreeNode, Val int, Depth int) int ```
 
   - **Returned Value**: Depth at which the value was found in **BST**.
+
+
+#### [**notInNodes**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L30):
+  - **Description**: Helper function to check if the value is found in slice or not.
+
+  - **Signature**: ``` func notInNodes(nodes *[]TreeNode, v *TreeNode) bool  ```
+
+  - **Returned Value**: Returns boolean - **true** if value was found in slice, **false** otherwise.
 
 
 #### [**PrintTree**](https://github.com/dmitryro/gotests/blob/master/tree/tree.go#L30):
