@@ -70,6 +70,42 @@ type Queue[T any] []T
 
 
 ### Tests
+#### [**TestDequeue**](https://github.com/dmitryro/gotests/blob/master/queue/queue_test.go#L8):
+  - **Description**: Verify the item is dequeued from the **Queue**.
+
+  - **Signature**: ``` func TestDequeue(t *testing.T)  ```
+
+  - **Assumptions**:  A new queue has been initialized, a value has been enqueued and then dequeued from the queue.
+
+  - **Asserted Success**: The size of queue after value is removed is 0.
+
+  - **Asserted Failure**: The size of queue after value is removed is *not* 0. 
+
+
+#### [**TestEnqueue**](https://github.com/dmitryro/gotests/blob/master/queue/queue_test.go#L22):
+  - **Description**: Verify the item is enqueued to the **Queue**.
+
+  - **Signature**: ``` func TestEnqueue(t *testing.T)  ```
+
+  - **Assumptions**: A new queue has been initialized and a value is enqueued into the queue.
+
+  - **Asserted Success**: The size of queue is 1.
+
+  - **Asserted Failure**: The size of queue is *not* 1.
+
+
+#### [**TestQueueSize**](https://github.com/dmitryro/gotests/blob/master/queue/queue_test.go#L35):
+  - **Description**: Verify the size of the **Queue** is as expected.
+
+  - **Signature**: ``` func TestQueueSize(t *testing.T)  ```
+
+  - **Assumptions**: For the sake of unit test, a new queue is initialized and 3 values added to the queue
+
+  - **Asserted Success**: The size of queue is 3.
+
+  - **Asserted Failure**: The size of queue is *not* 3.
+
+
 
 
 ## [Binary Search Tree](https://github.com/dmitryro/gotests/blob/master/tree/tree.go)
